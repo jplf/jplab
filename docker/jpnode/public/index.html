@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html xmlns:ng="http://angularjs.org" ng-app="drag">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Angular test zone</title>
+
+</head>
+
+<body>
+<div class="main" ng-controller="MainCtrl">
+
+    <h1 style="margin-top: 2em;">Welcome to the Angular Lab !</h1>
+
+
+    <div class="center" >
+
+    <p ng-init="name='Jaypee'">Hello {{name}}!</p>
+
+    <b>This is a testing area !</b>
+    <p>
+    I can add: 5 + 2 = {{ 5+2 }} in version : {{version}}
+    <p>
+    <input ng-model="data">
+    <p>
+      Data : {{data}} !
+
+    </div>
+    <span draggable
+          style="border:1px solid; background-color: white;">Drag ME</span>
+</div>
+
+<script src="//code.angularjs.org/1.4.0-beta.5/angular.min.js"></script>
+<script src="js/drag.js"></script>
+</body>
+</html>

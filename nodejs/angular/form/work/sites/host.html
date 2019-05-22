@@ -1,0 +1,14 @@
+
+<div class="pane" ng-controller="HostCtrl">
+
+  <h3>{{header}}</h3>
+
+<ul class="nav nav-pills">
+    <li><a ng-click="subPage='organization.html'">Organization</a></li>
+    <li><a ng-click="subPage='geoloc.html'">Geolocation</a></li>
+    <li><a ng-click="subPage='network.html'">Internet</a></li>
+</ul>
+
+<ng-include src="subPage"></ng-include>
+
+</div>

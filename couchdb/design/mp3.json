@@ -1,0 +1,20 @@
+{
+  "_id": "_design/mp3",
+  "_rev": "9-cfc5fa2bd4eb81bfebd6aab75c940ea0",
+  "views" : {
+    "discs" : {
+      "map" : "function(doc) {if (doc.disc) {emit(doc.disc, 1)}}",
+      "reduce": "_count"
+    },
+    "files" : {
+      "map" : "function(doc) {if (doc.disc && doc.filename) {emit(doc.disc, doc.filename)}}"
+    },
+    "artists" : {
+      "map": "function(doc) {if (doc.artist) {emit(doc.artist, 1)}}",
+      "reduce":"_count"
+    },
+    "songs" : {
+      "map" : "function(doc) {if (doc.artist) {emit(doc.artist, doc.songname)}}"
+    }
+  }
+}

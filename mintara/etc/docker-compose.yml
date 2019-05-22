@@ -1,0 +1,65 @@
+#_______________________________________________________________________________
+
+# Composition of the nats server.
+# This is a sample which must be copied somewhere else and updated.
+# Note that the visualizer in also started but it is independant of nats.
+
+# docker stack deploy --with-registry-auth -c docker-compose.yml mintara
+
+# Check the configuration file nats-server.yml
+
+# Jean-Paul Le Fèvre - October 2018
+# See : https://docs.docker.com/compose/reference/overview/
+#_______________________________________________________________________________
+
+version: '3.6'
+
+services:
+  nats:
+    image: svomtest.svom.fr:5543/nats-streaming:0.11.2
+      
+    deploy:
+      labels:
+        org.svom.messaging: "Svom FSC messaging server"
+      placement:
+        constraints:
+          - node.role == manager
+      mode: global
+      restart_policy:
+        condition: none
+      
+    ports:
+      - 4222:4222
+      - 8222:8222
+      
+    command: -sc /etc/nats-server.yml
+    
+    volumes:
+      - "/var/log/nats-server.log:/tmp/nats-server.log"
+    
+    secrets:
+      - source : nats.conf
+        target : /etc/nats-server.yml
+        read_only: true
+       
+    networks:
+      - fscnet
+      
+  visualizer:
+    image: dockersamples/visualizer:stable
+       
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+secrets:
+  nats.conf:
+    external: true
+    
+networks:
+  fscnet:
+    external: true
+    driver: overlay
+      
+#_______________________________________________________________________________

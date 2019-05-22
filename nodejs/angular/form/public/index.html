@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="main-module">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+  <!-- [if lte IE 9] >
+      <script>
+        document.createElement('ng-include');
+        document.createElement('ng-view');
+      </script>
+
+  <! [endif] -->
+
+  <link rel="stylesheet" href="/css/flatly-bootstrap.min.css" >
+  <link rel="stylesheet" href="/css/style.css" >
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    nav.me {
+    font-family: "Lucida", "Arial";
+    background-color: #e6ffeb;
+    font-weight: bold;
+    }
+  </style>
+
+
+  <title>Angular Site Manager</title>
+
+</head>
+
+<body>
+<div class="container-fluid main" ng-controller="MainCtrl">
+
+<div class="navbar navbar-static-top">
+
+  <div class="navbar-inner svbar">
+    <a class="brand" href="#">Svom</a>
+    <ul class="nav">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/users">Users</a></li>
+      <li><a href="/sites">Sites</a></li>
+      <li><a href="/map">Map</a></li>
+    </ul>
+      <p class="navbar-text pull-right">Text to display</p>
+  </div>
+</div>
+
+  <div ng-view></div>
+
+</div>
+
+<script
+   src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+<script
+   src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js">
+</script>
+<script src="js/angular-google-maps.js"></script>
+<script src="js/ui-bootstrap.min.js"></script>
+<script src="js/countries.min.js"></script>
+<script src="js/main-module.js"></script>
+<script src="js/user-module.js"></script>
+<script src="js/site-module.js"></script>
+</body>
+</html>

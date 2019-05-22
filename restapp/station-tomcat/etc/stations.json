@@ -1,0 +1,100 @@
+[ {
+  "name" : "first",
+  "owner" : null,
+  "longitude" : 1.2456,
+  "latitude" : 45.8975,
+  "creationDate" : "2015-06-10T13:12Z",
+  "address" : "132.166.9.146"
+}, {
+  "name" : "second",
+  "owner" : null,
+  "longitude" : -170.2456,
+  "latitude" : -30.8975,
+  "creationDate" : "2015-07-04T08:00Z",
+  "address" : "10.166.0.254"
+}, {
+  "name" : "new",
+  "owner" : null,
+  "longitude" : 2.148629,
+  "latitude" : 48.721867,
+  "creationDate" : "2015-06-23T14:02Z",
+  "address" : "10.11.12.13"
+}, {
+  "name" : "more",
+  "owner" : null,
+  "longitude" : 145.14864,
+  "latitude" : -68.01458,
+  "creationDate" : "2015-06-23T16:08Z",
+  "address" : "100.110.120.130"
+}, {
+  "name" : "july",
+  "owner" : null,
+  "longitude" : 28.148628,
+  "latitude" : -48.11166,
+  "creationDate" : "2015-07-16T11:01Z",
+  "address" : "10.11.12.14"
+}, {
+  "name" : "j0",
+  "owner" : null,
+  "longitude" : 28.148628,
+  "latitude" : -48.11166,
+  "creationDate" : "2015-07-16T16:44Z",
+  "address" : "10.11.12.14"
+}, {
+  "name" : "put4",
+  "owner" : null,
+  "longitude" : 28.148628,
+  "latitude" : -68.01458,
+  "creationDate" : "2015-07-17T14:08Z",
+  "address" : "150.110.120.138"
+}, {
+  "name" : "july28",
+  "owner" : {
+    "name" : "jaypee",
+    "email" : "jaypee@fonteny.org"
+  },
+  "longitude" : 28.458,
+  "latitude" : -45.0,
+  "creationDate" : "2015-07-28T14:51Z",
+  "address" : "120.10.0.138"
+}, {
+  "name" : "july31",
+  "owner" : {
+    "name" : "lefevre",
+    "email" : "jaypee.lefevre@gmail.com"
+  },
+  "longitude" : 28.458,
+  "latitude" : 45.0,
+  "creationDate" : "2015-07-31T15:29Z",
+  "address" : "10.10.209.10"
+}, {
+  "name" : "sep25",
+  "owner" : {
+    "name" : "lefevre",
+    "email" : "jaypee.lefevre@gmail.com"
+  },
+  "longitude" : 28.458,
+  "latitude" : 45.0,
+  "creationDate" : "2015-09-25T13:49Z",
+  "address" : "10.10.10.10"
+}, {
+  "name" : "tom1",
+  "owner" : {
+    "name" : "lefevre",
+    "email" : "jaypee.lefevre@gmail.com"
+  },
+  "longitude" : 28.458,
+  "latitude" : 45.0,
+  "creationDate" : "2015-09-25T13:51Z",
+  "address" : "10.10.10.10"
+}, {
+  "name" : "tom2",
+  "owner" : {
+    "name" : "lefevre",
+    "email" : "jaypee.lefevre@gmail.com"
+  },
+  "longitude" : 28.458,
+  "latitude" : 45.0,
+  "creationDate" : "2015-09-28T12:36Z",
+  "address" : "20.10.10.20"
+} ]

@@ -1,0 +1,6 @@
+*~
+docker-compose.yml
+index.html
+nats-server.yml
+conf
+htdocs

@@ -1,0 +1,8 @@
+
+http://localhost:5984/zikmu/_design/singer/_view/counts/?group=true
+http://localhost:5984/zikmu/_design/mp3/_view/discs/?group=true
+http://localhost:5984/zikmu/_design/mp3/_view/files?key="10"
+
+
+http://localhost:5984/zikmu/_design/webapp/home.html
+http://irfupce211:5984/zikmu/_design/webapp/home.html

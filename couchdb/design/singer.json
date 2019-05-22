@@ -1,0 +1,9 @@
+{
+  "_id" : "_design/singer",
+  "views" : {
+    "songs" : {
+      "map" : "function(doc) {if (doc.artist && doc.songname) {emit(doc.artist, doc.songname)}}"},
+    "counts" : {
+      "map": "function(doc) {if (doc.artist) {emit(doc.artist, 1)}}",
+      "reduce":"_count"}}
+}

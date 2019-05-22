@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Web application  configuration file -->
+<!-- Jean-Paul Le Fèvre - August 2016 -->
+
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+    <display-name>Svom VHF Db</display-name>
+    <description>
+        This web application is meant learn how to use gradle, then
+        to test the OAuth2 protocol.
+    </description>
+
+    <context-param>
+      <param-name>author</param-name>
+      <param-value>J-P.LeFevre@cea.fr</param-value>
+      <description>
+        The email address of the administrator to whom questions
+        and comments about this application should be addressed.
+      </description>
+    </context-param>
+    
+    <listener>
+        <listener-class>
+	    org.svom.vhfdb.server.AppContextListener
+	</listener-class>
+    </listener>
+    
+    <filter> 
+        <filter-name>checkin</filter-name>
+        <filter-class>org.svom.vhfdb.server.CheckInFilter</filter-class> 
+    </filter>
+    
+    <filter-mapping> 
+        <filter-name>checkin</filter-name>
+        <url-pattern>/login</url-pattern> 
+    </filter-mapping> 
+
+    <servlet>
+         <servlet-name>front</servlet-name>
+         <description>
+             This servlet is used to display the front page.
+         </description>
+        <servlet-class>org.svom.vhfdb.server.FrontServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+         <servlet-name>logout</servlet-name>
+         <description>
+             This servlet is used to manage the logout option.
+         </description>
+        <servlet-class>org.svom.vhfdb.server.LogoutServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>front</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+</web-app>

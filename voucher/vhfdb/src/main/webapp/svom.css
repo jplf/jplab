@@ -1,0 +1,73 @@
+/* __________________________________________________________________________
+   
+   CSS the SvomTest web site - Jean-Paul Le Fèvre - April 2002
+   __________________________________________________________________________
+*/
+/* Main content */
+body {
+	color:      black;
+	background: #ffffe0;
+	margin-left: 1em;
+}
+/* Manual section */
+div.m {
+	margin-left:      1em;
+	padding-left:     2em;
+	padding-right:    1em;
+}
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    color: #8b4513;
+}
+
+li.s {
+	padding-bottom:   1em;
+}
+
+/* Sample of code */
+code {
+        font-family:   "Arial", "Helvetica", sans-serif;
+}
+/* Sample of code */
+code.c {
+        color:         #8b4513;
+	margin-left:     2em;
+        font-family:   "Arial", "Helvetica", sans-serif;
+}
+/* Environment variable */
+code.l {
+        color:        #8b4513;
+        font-family:  "Arial", "Helvetica", sans-serif;
+}
+
+/* Paragraph of code */
+p.c {
+        font-family:   "Arial", "Helvetica", sans-serif;
+	color: #8b4513;
+	margin-left:      1em;
+	padding-left:     2em;
+	padding-right:    1em;
+}
+pre.c {
+	color:       #8b4513;
+	margin-left: 2em;
+	font-size:   larger;
+}
+
+/* Table cell centered */
+td.c {
+	margin-left:    0.1em;
+	padding-left:     1em;
+	padding-right:    1em;
+	text-align:    center;
+}
+/* Table cell right justified */
+td.r {
+	margin-left:    0.1em;
+	padding-left:     1em;
+	padding-right:    1em;
+	text-align:    right;
+}
+/* __________________________________________________________________________ */

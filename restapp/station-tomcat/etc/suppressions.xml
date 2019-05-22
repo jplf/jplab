@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_0.dtd">
+
+<!--
+Updated May 2015 - Jean-Paul Le Fèvre
+-->
+
+<suppressions>
+
+    <suppress checks="MagicNumber" files="Station.java"/>
+    <suppress checks="MagicNumber" files="StationManager.java"/>
+    <suppress checks="VisibilityModifier"
+              files="StationService.java"/>
+
+</suppressions>

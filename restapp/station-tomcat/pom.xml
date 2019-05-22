@@ -1,0 +1,128 @@
+<!-- _______________________________________________________________________ -->
+
+<!-- Maven command file - September 2015 -->
+<!-- _______________________________________________________________________ -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.svom</groupId>
+    <artifactId>station-tomcat</artifactId>
+    <packaging>war</packaging>
+    <version>1.0</version>
+    <name>station-tomcat</name>
+
+    <build>
+        <finalName>vhf</finalName>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>2.5.1</version>
+            <inherited>true</inherited>
+            <configuration>
+              <source>1.7</source>
+              <target>1.7</target>
+            </configuration>
+          </plugin>
+
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>2.4.1</version>
+            <configuration>
+              <verbose>false</verbose>
+              <filesets>
+                <fileset>
+                  <directory>${basedir}</directory>
+                  <includes>
+                    <include>**/*~</include>
+                  </includes>
+                </fileset>
+              </filesets>
+            </configuration>
+          </plugin>
+
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-checkstyle-plugin</artifactId>
+              <version>2.15</version>
+              <executions>
+                <execution>
+                  <id>validate</id>
+                  <phase>validate</phase>
+                 <goals>
+                    <goal>check</goal>
+                  </goals>
+                </execution>
+              </executions>
+
+              <configuration>
+                <outputFile>${basedir}/target/checked.xml</outputFile>
+                <encoding>UTF-8</encoding>
+                <consoleOutput>true</consoleOutput>
+                <failsOnError>false</failsOnError>
+                <failsOnViolation>false</failsOnViolation>
+                <linkXRef>false</linkXRef>
+              </configuration>
+             </plugin>
+
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.glassfish.jersey</groupId>
+                <artifactId>jersey-bom</artifactId>
+                <version>${jersey.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+          <groupId>io.swagger</groupId>
+          <artifactId>swagger-jersey2-jaxrs</artifactId>
+          <version>1.5.0</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+      <jackson.version>2.4.4</jackson.version>
+      <jersey.version>2.21</jersey.version>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+      <checkstyle.config.location>
+        ${basedir}/etc/style.xml
+      </checkstyle.config.location>
+      <checkstyle.suppressions.location>
+        ${basedir}/etc/suppressions.xml
+      </checkstyle.suppressions.location>
+
+    </properties>
+
+</project>
+<!-- _______________________________________________________________________ -->

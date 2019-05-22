@@ -1,0 +1,27 @@
+
+<div ng-controller="PhotosCtrl">
+
+  <div class="center" style="margin-bottom:3em;" ng-show="imageUrl">
+
+      <img class="photo" ng-src="{{imageUrl}}" alt="{{imageCaption}}">
+      <br>
+
+      <div class="photo" style="margin-top:1em; position:relative;">
+
+      <span style="text-align:center;">{{imageCaption}}</span>
+
+  </div>
+
+    <div ng-controller="UploadCtrl">
+
+        <input type="file" name="picture"
+               onchange="angular.element(this).scope().fileChange(this)">
+        </input>
+
+        <input type="submit" name="upload"
+               ng-click ="fileUpload()">Upload</input>
+
+    </div>
+
+
+</div>

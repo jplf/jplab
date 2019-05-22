@@ -1,0 +1,57 @@
+#_______________________________________________________________________________
+
+# Composition of posgres
+
+# To start the server :
+# docker stack deploy -c docker-compose.yml sonardb
+
+# To use the client
+# docker run -it --rm postgres:11.2 psql -h svom-fsc-0 -U postgres
+
+# Jean-Paul Le Fèvre - April 2019
+
+#_______________________________________________________________________________
+
+version: '3.6'
+
+services:
+
+  postgres:
+    image: postgres:11.2
+    
+    volumes:
+      - /var/db/pgsql/data:/var/lib/postgresql/data
+
+    ports:
+      - 5432:5432
+      
+    environment :
+        POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+        
+    networks:
+      - sonarnet
+
+    secrets:
+      - source: postgres_password
+        target: /run/secrets/postgres_password
+        read_only: true
+       
+  adminer:
+    image: adminer:4.7
+    
+    ports:
+      - 20080:8080
+      
+    networks:
+      - sonarnet
+
+secrets:
+  sonar_password:
+    external: true
+  postgres_password:
+    external: true
+      
+networks:
+  sonarnet:
+    external: false
+#_______________________________________________________________________________

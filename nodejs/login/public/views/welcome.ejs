@@ -1,0 +1,33 @@
+<% include head %>
+
+<h1><%= title %></h1>
+
+<p>
+  Welcome to the main page !
+<p>
+<%= message %>
+<p>
+
+<% if (isAdmin) {%>
+Admin section
+<%}%>
+
+<p>
+<% if (isMember) {%>
+Member section
+<%}%>
+
+<p>
+<% if (isGuest) {%>
+Guest section
+<%}%>
+
+<p>
+<% if (isLogged) {%>
+    Logged section
+<%} else {%>
+    No yet connected !
+<%}%>
+
+<p>
+  <a href="/logout">Logout</a>

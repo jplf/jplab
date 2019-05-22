@@ -1,0 +1,19 @@
+{
+  "name": "angular_node_first",
+  "version": "1.0.0",
+  "description": "A simple nodejs app ready to be put in container",
+  "author": "Jean-Paul Le Fèvre <lefevre@fonteny.org>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+      "express": ">4.0",
+      "serve-favicon": ">2.0",
+      "morgan": ">1.6",
+      "body-parser": ">1.14",
+      "method-override": "2.3.x",
+      "serve-static": "1.10.x", 
+      "errorhandler": "1.x"
+  }
+}

@@ -1,0 +1,34 @@
+//-*- mode: groovy -*-
+//______________________________________________________________________________
+/*
+ * This build file was generated on 01/09/2016
+ * Jean-Paul Le Fèvre <jean-paul.lefevre@cea.fr>
+ *
+ * gradle -q --console plain tasks
+ * gradle -q clean
+ */
+//______________________________________________________________________________
+
+defaultTasks 'compileJava'
+
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'com.rabbitmq:amqp-client:3+'
+  compile 'commons-cli:commons-cli:1.3+'
+}
+
+compileJava.doFirst {
+  println 'Compilation starting ...'
+}
+
+compileJava.doLast {
+  println 'Compilation done !'
+}
+
+//______________________________________________________________________________

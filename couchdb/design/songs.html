@@ -1,0 +1,23 @@
+<div class="pane" ng-controller="SongsCtrl">
+
+  <h2 class="h">{{header}}</h2>
+
+  <div class="center">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr class="warning">
+          <th>Album</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="r in zikdb.rows">
+          <td class="d">{{r.doc.album}}</td>
+          <td class="d">{{r.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

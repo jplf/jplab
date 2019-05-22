@@ -1,0 +1,83 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+.navbar{border:none;font-size:13px;font-weight:300;}.navbar .navbar-toggle:hover .icon-bar{background-color:#b3b3b3;}
+.navbar-collapse{border-top-color:rgba(0, 0, 0, 0.2);}
+.navbar .dropdown-menu{border:none;}.navbar .dropdown-menu>li>a,.navbar .dropdown-menu>li>a:focus{background-color:transparent;font-size:13px;font-weight:300;}
+.navbar .dropdown-header{color:rgba(255, 255, 255, 0.5);}
+.navbar-default .dropdown-menu{background-color:#333333;}.navbar-default .dropdown-menu>li>a,.navbar-default .dropdown-menu>li>a:focus{color:#ffffff;}
+.navbar-default .dropdown-menu>li>a:hover,.navbar-default .dropdown-menu>.active>a,.navbar-default .dropdown-menu>.active>a:hover{background-color:#272727;}
+.navbar-inverse .dropdown-menu{background-color:#008cba;}.navbar-inverse .dropdown-menu>li>a,.navbar-inverse .dropdown-menu>li>a:focus{color:#ffffff;}
+.navbar-inverse .dropdown-menu>li>a:hover,.navbar-inverse .dropdown-menu>.active>a,.navbar-inverse .dropdown-menu>.active>a:hover{background-color:#006687;}
+.btn{padding:14px 28px;}.btn-lg{padding:16px 32px;}
+.btn-sm{padding:8px 16px;}
+.btn-xs{padding:4px 8px;}
+.btn-group .btn~.dropdown-toggle{padding-left:16px;padding-right:16px;}
+.btn-group .dropdown-menu{border-top-width:0;}
+.btn-group.dropup .dropdown-menu{border-top-width:1px;border-bottom-width:0;margin-bottom:0;}
+.btn-group .dropdown-toggle.btn-default~.dropdown-menu{background-color:#e7e7e7;border-color:#dadada;}.btn-group .dropdown-toggle.btn-default~.dropdown-menu>li>a{color:#333333;}
+.btn-group .dropdown-toggle.btn-default~.dropdown-menu>li>a:hover{background-color:#d3d3d3;}
+.btn-group .dropdown-toggle.btn-primary~.dropdown-menu{background-color:#008cba;border-color:#0079a1;}.btn-group .dropdown-toggle.btn-primary~.dropdown-menu>li>a{color:#ffffff;}
+.btn-group .dropdown-toggle.btn-primary~.dropdown-menu>li>a:hover{background-color:#006d91;}
+.btn-group .dropdown-toggle.btn-success~.dropdown-menu{background-color:#43ac6a;border-color:#3c9a5f;}.btn-group .dropdown-toggle.btn-success~.dropdown-menu>li>a{color:#ffffff;}
+.btn-group .dropdown-toggle.btn-success~.dropdown-menu>li>a:hover{background-color:#388f58;}
+.btn-group .dropdown-toggle.btn-info~.dropdown-menu{background-color:#5bc0de;border-color:#46b8da;}.btn-group .dropdown-toggle.btn-info~.dropdown-menu>li>a{color:#ffffff;}
+.btn-group .dropdown-toggle.btn-info~.dropdown-menu>li>a:hover{background-color:#39b3d7;}
+.btn-group .dropdown-toggle.btn-warning~.dropdown-menu{background-color:#e99002;border-color:#d08002;}.btn-group .dropdown-toggle.btn-warning~.dropdown-menu>li>a{color:#ffffff;}
+.btn-group .dropdown-toggle.btn-warning~.dropdown-menu>li>a:hover{background-color:#c17702;}
+.btn-group .dropdown-toggle.btn-danger~.dropdown-menu{background-color:#f04124;border-color:#ea2f10;}.btn-group .dropdown-toggle.btn-danger~.dropdown-menu>li>a{color:#ffffff;}
+.btn-group .dropdown-toggle.btn-danger~.dropdown-menu>li>a:hover{background-color:#dc2c0f;}
+.lead{color:#6f6f6f;}
+cite{font-style:italic;}
+blockquote{border-left-width:1px;color:#6f6f6f;}blockquote.pull-right{border-right-width:1px;}
+blockquote small{font-size:12px;font-weight:300;}
+table{font-size:12px;}
+input,.form-control{padding:7px;font-size:12px;}
+label,.control-label,.help-block,.checkbox,.radio{font-size:12px;font-weight:normal;}
+.form-group .btn,.input-group-addon,.input-group-btn .btn{padding:8px 14px;font-size:12px;}
+.nav .open>a,.nav .open>a:hover,.nav .open>a:focus{border-color:transparent;}
+.nav-tabs>li>a{background-color:#e7e7e7;color:#222222;}
+.nav-tabs .caret{border-top-color:#222222;border-bottom-color:#222222;}
+.nav-pills{font-weight:300;}
+.breadcrumb{border:1px solid #dddddd;border-radius:3px;font-size:10px;font-weight:300;text-transform:uppercase;}
+.pagination{font-size:12px;font-weight:300;color:#999999;}.pagination>li>a,.pagination>li>span{margin-left:4px;color:#999999;}
+.pagination>.active>a,.pagination>.active>span{color:#fff;}
+.pagination>li>a,.pagination>li:first-child>a,.pagination>li:last-child>a,.pagination>li>span,.pagination>li:first-child>span,.pagination>li:last-child>span{border-radius:3px;}
+.pagination-lg>li>a{padding-left:22px;padding-right:22px;}
+.pagination-sm>li>a{padding:0 5px;}
+.pager{font-size:12px;font-weight:300;color:#999999;}
+.list-group{font-size:12px;font-weight:300;}
+.alert{font-size:12px;font-weight:300;}.alert a,.alert .alert-link{font-weight:normal;color:#fff;text-decoration:underline;}
+.label{padding-left:1em;padding-right:1em;border-radius:0;font-weight:300;}.label-default{background-color:#e7e7e7;color:#333333;}
+.badge{font-weight:300;}
+.progress{height:22px;padding:2px;background-color:#f6f6f6;border:1px solid #ccc;}
+.dropdown-menu{padding:0;margin-top:0;font-size:12px;}.dropdown-menu>li>a{padding:12px 15px;}
+.dropdown-header{padding-left:15px;padding-right:15px;font-size:9px;text-transform:uppercase;}
+.popover{color:#fff;font-size:12px;font-weight:300;}
+body{padding:10px;}
+div.main{border:1px solid #242e35;border-radius:10px;margin:auto;padding:0.5em 0.5em;min-height:40em;}
+div.pane{margin:auto;padding:1.0em;}
+div.form{margin:1.0em auto;width:80%;}
+.feed-back{font-size:smaller;}
+div.msg{margin:0.1em auto;padding:0.1em;text-align:center;}
+div.center{text-align:center;margin:auto;}
+h1{text-align:center;font-size:24.5px;}
+h2{text-align:center;margin:auto;font-size:20px;}
+h2.h{margin-top:1em;margin-bottom:1em;}
+h3{text-align:center;margin:auto;font-size:16px;}
+h3.p{text-align:left;margin:1em 1em 0.3em 0.5em;font-size:16px;font-weight:bold;}
+h4{margin:2em auto 1em auto;text-align:center;font-size:16px;font-weight:bold;}
+h5{margin:0.0em auto 1em auto;text-align:center;font-size:14px;font-weight:bold;}
+table td{text-align:left;}
+table td.c{text-align:center;}
+table td.h{font-weight:bold;width:8em;}
+table td.d{color:#888;}
+p.d{color:#888;}
+th{font-weight:bold;text-align:center;background-color:#18bc9c;}
+span.h{color:#666;font-weight:bold;text-align:center;}
+span.version{font-size:10px;text-align:left;font-style:oblique;position:absolute;}
+textarea.info{padding:7px;font-size:12px;width:70%;height:5em;margin:auto;}
+.info.ro{color:#888;background-color:#ddd;}
+.opt{color:#3498db;}
+.date{width:20em;}
+.rite{text-align:right;}
+.tech{font-style:oblique;}
+.center{text-align:center;margin:auto;}

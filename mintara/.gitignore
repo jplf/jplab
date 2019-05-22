@@ -1,0 +1,12 @@
+gradle-app.setting
+.gradle
+build.java
+build
+tmp
+lib
+contrib
+__pycache__
+gradlew
+gradlew.bat
+gradle
+.scannerwork

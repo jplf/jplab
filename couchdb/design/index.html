@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="main-module">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="bootstrap.min.css" >
+  <link rel="stylesheet" href="bootstrap-responsive.min.css" >
+  <link rel="stylesheet" href="zikmu.css" >
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ma Muzik</title>
+
+</head>
+
+<body>
+<div class="container-fluid main" ng-controller="MainCtrl">
+
+  <div class="navbar navbar-inverse">
+
+    <div class="navbar-header">
+      <span class="navbar-brand">Ma collection de MP trois</span>
+
+      <ul class="nav navbar-nav">
+        <li><a href="/home">Home</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li><a href="/discs">Discs</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li><a href="/artists">Artists</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div ng-view></div>
+
+</div>
+
+<script
+   src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js">
+</script>
+<script src="ui-bootstrap.min.js"></script>
+<script src="angular-cornercouch.js"></script>
+<script src="main-module.js"></script>
+</body>
+</html>

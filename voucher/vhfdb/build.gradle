@@ -1,0 +1,42 @@
+//-*- mode: groovy -*-
+//______________________________________________________________________________
+/*
+ * This build file was generated on 24/08/2016
+ *
+ * gradle -q --console plain tasks
+ * gradle -q clean
+ */
+//______________________________________________________________________________
+
+defaultTasks 'war'
+
+apply plugin: 'war'
+apply plugin: 'checkstyle'
+
+repositories {
+    // I use 'jcenter' for resolving my dependencies.
+  jcenter()
+}
+
+dependencies {
+  compile 'org.apache.tomcat:tomcat-catalina:8+'
+  compile 'commons-logging:commons-logging:1+'
+  compile 'commons-cli:commons-cli:1.3+'
+  compile 'log4j:log4j:1+'
+  compile 'io.jsonwebtoken:jjwt:0.7.0'
+  runtime 'com.fasterxml.jackson.core:jackson-databind:2.8.+'
+}
+
+compileJava.doFirst {
+  println 'Compilation starting ...'
+}
+
+compileJava.doLast {
+  println 'Compilation done !'
+}
+
+task messenger << {
+  println 'Version ' + findProperty('app.version')
+  println 'Release ' + findProperty('vhfdb.app.release')
+}
+//______________________________________________________________________________

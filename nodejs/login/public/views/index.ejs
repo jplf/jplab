@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link  rel="stylesheet"href=
+"//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+<div class="main">
+
+  <h1><%= title %></h1>
+
+  <div class="center" style="width: 25em; margin: 6em auto;">
+
+  This is the webapp used to try the
+  <a href="http://passportjs.org">PassportJS</a> package.
+
+    <form name="LoginForm" method="post" action="/login">
+
+      <table class="table table-bordered"
+             style="background-color: #9cc089;margin: 2em 1em;">
+        <tbody>
+          <tr>
+            <td class="h">Login</td>
+            <td><input type="text"  name="username"></td>
+          </tr>
+          <tr>
+            <td class="h">Password</td>
+            <td><input type="password" name="password"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn btn-small" type="submit" name="button"
+              value="OK">OK</button>
+
+    </form>
+
+  <p class="warn">
+   <%= message %>
+ 
+  </div>
+
+</div>
+<script src=
+"//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js">
+</script>
+</body>
+</html>

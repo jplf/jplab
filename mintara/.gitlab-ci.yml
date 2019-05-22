@@ -1,0 +1,39 @@
+#______________________________________________________________________________
+
+# The Mintara CI configuration -
+# Jean-Paul Le Fèvre - 22 November 2018 -
+#______________________________________________________________________________
+
+stages:
+  - build
+  - test
+  - deploy
+
+before_script:
+  - echo "Starting to work !"
+
+make:
+  stage:
+    - build
+  variables:
+    GIT_SSL_NO_VERIFY: "1"
+  tags:
+    - nats
+  script:
+    - echo "Building the Mintara application"
+  after_script:
+    - echo "Done building !"
+
+check:
+  stage:
+    - test
+  script:
+   - echo "Everything is fine !"
+
+install:
+  stage:
+    - deploy
+  script:
+    - echo "Application Mintara installed"
+    
+#______________________________________________________________________________

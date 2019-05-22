@@ -1,0 +1,55 @@
+
+<div class="pane">
+
+  <h3>Welcome to the SvomHosting web site !</h3>
+
+<p>
+  Svom Project (Space Variable Objects Monitor), in cooperation with
+  China, consists in developing an X and gamma-ray astronomy mission
+  which main objective is the observation and characterisation of the
+  Gamma-Ray Bursts from the deep Universe.
+  Svom was the aim of a Memorandum of Understanding between CNSA
+  (China National Space Administration) and Cnes defining the
+  responsibilities shared between the agencies.
+
+  <div  class="center" style="width: 25em; margin: 6em auto;"
+        ng-controller="LoginCtrl">
+    <form name="LoginForm">
+
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td class="h">
+              <span tooltip="Your login name">Login</span>
+            </td>
+            <td><input type="text" ng-model="account.username"></td>
+          </tr>
+          <tr>
+            <td class="h">
+              <span tooltip="Your password">Password</span>
+            </td>
+            <td><input type="password" ng-model="account.password"></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <button class="btn-primary btn-small" type="button"
+              tooltip="Get connected !" ng-disabled="!LoginForm.$valid"
+              ng-click="submit()">OK
+      </button>
+
+      <button class="btn-primary btn-small" type="button"
+              tooltip="Disconnect !"
+              ng-click="logout()">Bye
+      </button>
+
+
+      <div ng-class="style">
+        {{message}}
+      </div>
+
+    </form>
+  </div>
+
+</div>

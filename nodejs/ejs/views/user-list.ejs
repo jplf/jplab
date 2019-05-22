@@ -1,0 +1,24 @@
+<% include head %>
+<h1><%= title %></h1>
+
+<ul>
+
+<% for(var i=0; i < list.length; i++) {%>
+   <li><%= list[i].name %> <%= list[i].org %></li>
+<% } %>
+
+</ul>
+
+  <h3>Form</h3>
+  <form Method = "post" action = "/users/list/try" name="try_form">
+
+  <p>
+     <input type = 'text' name = 'what' value = <%= my_string %> >
+     <input class ='b' type = 'submit' name='ok' value='ok'>
+
+  </form>
+
+  <p>
+  <a href='/users'>back</a>
+
+<% include foot %>

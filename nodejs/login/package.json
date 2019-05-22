@@ -1,0 +1,27 @@
+{
+    "name": "loginjs",
+    "version": "0.1.0",
+    "private": false,
+    "description":
+    "This web application is just there to lean how to use nodejs.",
+    "main": "app.js",
+    "author": "Jean-Paul Le Fèvre",
+    "license": "See license in app.js",
+    "repository": {
+        "type": "git",
+        "url": "https://drf-gitlab.cea.fr/jplf/nodejs/login.git"
+    },
+    "dependencies": {
+        "express": ">=4.0",
+        "express-session": ">=1.12",
+        "serve-favicon": ">=2.0",
+        "body-parser": ">=1.14",
+        "method-override": ">=2.3",
+        "cookie-parser": ">=1.4",
+        "passport": ">=0.3",
+        "passport-local": ">=1.0",
+        "mongoose": ">=4.4",
+        "connect-flash": ">=0.1",
+        "ejs": "*"
+    }
+}

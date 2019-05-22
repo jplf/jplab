@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html xmlns:ng="http://angularjs.org" ng-app="boots">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    nav.me {
+    font-family: "Lucida", "Arial";
+    background-color: #e6ffeb;
+    font-weight: bold;
+    }
+  </style>
+
+  <title>Angular test zone</title>
+
+</head>
+
+<body>
+<div class="main" ng-controller="MainCtrl">
+
+    <h1 style="margin-top: 2em;">{{header}} !</h1>
+
+    <div class="center">
+      <a href="/users">Users</a>
+      <br>
+      <a href="/sites">Sites</a>
+      <br>
+      <a href="/home">Home</a>
+    </div>
+
+    <div ng-view></div>
+<p>
+Tag : <span>{{tag}}</span>&nbsp;Count : <span>{{count}}</span>
+&nbsp;WtF : <span>{{wtf}}</span>
+</div>
+
+<script src="//code.angularjs.org/1.4.0-beta.5/angular.min.js"> </script>
+<script src="//code.angularjs.org/1.4.0-beta.5/angular-route.min.js"></script>
+<script src="//code.angularjs.org/1.4.0-beta.5/angular-cookies.min.js"></script>
+
+<script src="js/ui-bootstrap-tpls-0.4.0.js"></script>
+<script src="js/boots.js"></script>
+<script src="js/work.js"></script>
+
+</body>
+</html>

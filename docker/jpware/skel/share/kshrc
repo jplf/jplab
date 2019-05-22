@@ -1,0 +1,53 @@
+#! /bin/bash
+#______________________________________________________________________________
+#
+#	Environment file  - Bash shell - Jean-Paul Le Fèvre
+#______________________________________________________________________________
+
+alias m=more
+alias h=history
+alias rm="\rm -i"
+alias a=alias
+alias ll='/bin/ls -lt'
+alias fonc='typeset -f'
+alias ll='/bin/ls -lt'
+alias ml='more liste~'
+alias tl='tail liste~'
+alias df='df -h'
+alias du='du -sm'
+alias pwd='echo Repertoire : $PWD'
+alias date='date "+%H h. %M m. %S s. %tle %d %h %y"'
+alias chuw='chmod u+w'
+alias chaw='chmod a-w'
+alias qui='echo Tu es `whoami` sur `hostname`, idiot !'
+alias dlog='cd ${CATALINA_HOME}/logs; pwd'
+alias dtm='cd ${CATALINA_HOME}; pwd'
+alias iptbl='/sbin/iptables -L --line-numbers'
+
+alias date='date "+%H h. %M m. %S s. %t%A %d %h %Y"'
+alias df='df -h'
+alias du='du -sm'
+alias emacs='emacs -u lefevre'
+alias fonc='typeset -f'
+alias lsf='ls --color=never'
+alias ml='more liste~'
+alias prp='prpath.pl -c'
+alias qui='echo Tu es `whoami` sur `hostname`, idiot !'
+alias sa='. $ENV; alias'
+alias tl='tail liste~'
+
+alias Purge='find . \( -name "*%" -o -name ".*%" -o -name "*~" -o -name ".*~" -o -name "#*#" -o -name "core" -o -name "*.out" -o -name ",*" -o -name "*pure_*" \) -exec rm {} \; -print'
+
+#______________________________________________________________________________
+
+# Try to remember ...
+function psu
+{
+    if [ -z "$1" ]; then
+	u=$USER
+    else
+	u=$1
+    fi
+    ps -U $u -o "%U %p %a"
+}
+#______________________________________________________________________________

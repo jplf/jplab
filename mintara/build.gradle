@@ -1,0 +1,100 @@
+//-*- mode: groovy -*-
+//______________________________________________________________________________
+/*
+ * This build file was generated on 10/10/2018
+ * Jean-Paul Le Fèvre <jean-paul.lefevre@cea.fr>
+ *
+ * gradle -q --console plain tasks
+ * gradle -q clean
+ * compile 'commons-cli:commons-cli:1.3+'
+ */
+//______________________________________________________________________________
+
+plugins {
+  id "org.sonarqube" version "2.7"
+}
+
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+project.group = 'jplf'
+
+repositories {
+  mavenLocal()
+  jcenter()
+}
+
+dependencies {
+  implementation 'io.nats:java-nats-streaming:2.1.0'
+  compile 'com.google.guava:guava:27.0.1-jre'
+  compile 'com.github.pcj:google-options:1.0.0'
+}
+
+sonarqube {
+    properties {
+        property "sonar.exclusions", "**/io"
+    }
+}
+compileJava.doFirst {
+  println 'Compilation starting ...'
+}
+
+compileJava.doLast {
+  println 'Compilation done !'
+}
+
+clean.doFirst {
+  println 'Cleaning up this mess !'
+}
+
+clean.doLast {
+  println 'All cleaned up !'
+}
+
+defaultTasks 'compileJava'
+
+task probe {
+  
+  description = 'Examines the behaviour of this build file'
+  
+  FileCollection myFiles = fileTree('./bin') {
+    include '*.py'
+  }
+    
+  myFiles.each {File file ->
+    println file.name
+  }
+
+  doLast {
+    println '\nHello JP !'
+    println "Doc : " + project.docsDir
+    println "Root : " + rootDir
+  }
+}
+
+task checkAll {
+  
+  FileCollection myFiles = fileTree('./bin') {
+    include '*.py'
+  }
+   
+  myFiles.each {File file ->
+    exec {
+      workingDir 'bin'
+      commandLine 'pylint', file.name
+    }
+  }
+}
+
+checkstyleMain {
+    source  = 'src/main/java/org'
+}
+
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+}
+
+//______________________________________________________________________________

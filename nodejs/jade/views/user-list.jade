@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+
+  each item in list
+       li #{item.name} #{item.org}
+
+  | <h3> Form </h3>
+  | <form Method = "post" action = "/users/list/try" name="try_form">
+
+
+  // Testing a form
+  p
+     input(type='text', name='what', value= my_string)
+     input.b(type='submit', name='ok', value='ok')
+
+  | </form>
+
+  p
+     a(href='/users') back

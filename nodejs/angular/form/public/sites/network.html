@@ -1,0 +1,43 @@
+<div class="pane" ng-controller="NetworkCtrl">
+
+  <h3>Site networking</h3>
+
+  <form name="NetworkingForm">
+    <div class="center" style="width: 70%; margin-top:1em;">
+
+      <h4>Telecommunications</h4>
+
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td class="h">Internet</td>
+            <td>
+              <input type="checkbox" required
+                     ng-model="data.telecom.connectivity">
+            </td>
+          </tr>
+          </tr>
+          <tr>
+            <td class="h">ISP</td>
+            <td>
+              <input type="text" required
+                     ng-model="data.telecom.isp">
+            </td>
+          </tr>
+ 
+        </tbody>
+      </table>
+
+
+      <h4>More info</h4>
+
+      <textarea ng-model="data.telecom.information"
+                name="information"
+                style="width: 70%; height: 5em;">
+      </textarea>
+
+    <button class="btn btn-small" type="button" tooltip="Save changes"
+            ng-click="save()" ng-disabled="!NetworkingForm.$valid">Save
+    </button>
+
+</div>

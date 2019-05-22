@@ -1,0 +1,126 @@
+<div class="pane" ng-controller="GeolocationCtrl">
+
+  <h3>{{header}}</h3>
+
+  <form name="GeolocationForm">
+  <div class="center">
+
+    <div style="width: 40em; margin: 2em auto;">
+    <table class="table table-bordered">
+      <tbody>
+       <tr>
+         <td class="h">
+           <span tooltip="The name of the site">Name</span>
+         </td>
+         <td><input ng-readonly=true type="text" ng-model="data.name"></td>
+       </tr> 
+       <tr>
+         <td class="h">
+           <span tooltip="Value in decimal degrees">Longitude</span>
+         </td>
+         <td>
+           <input ng-model="data.geolocation.longitude" name="longitude"
+                    required type="number"  min="0"
+                    max="180"set="any">
+
+             <span class="toggle">West</span>
+             <input type="radio" ng-model="longitudeWE" value="West"
+                    class="toggle">
+
+             <span class="toggle">East</span>
+             <input type="radio" ng-model="longitudeWE" value="East"
+                    class="toggle">
+         </td>
+       </tr> 
+       <tr>
+         <td class="h">
+           <span tooltip="Value in decimal degrees">Latitude</span>
+         </td>
+         <td>
+           <input ng-model="data.geolocation.latitude" name="latitude"
+                  required type="number" min="0" max="90">
+
+           <span class="toggle">North</span>
+           <input type="radio" ng-model="latitudeNS" value="North"
+                  class="toggle">
+
+           <span class="toggle">South</span>
+           <input type="radio" ng-model="latitudeNS" value="South"
+                  class="toggle">
+         </td>
+       </tr> 
+       <tr>
+         <td class="h">
+           <span tooltip="Value in meters">Altitude</span>
+         </td>
+         <td>
+           <input ng-model="data.geolocation.altitude" name="altitude"
+                    type="number" min="0" max="4000">
+         </td>
+       </tr> 
+       <tr>
+         <td class="h">
+           <span tooltip="Closest main city">City</span>
+         </td>
+         <td>
+           <input type="text" ng-model="data.geolocation.city" name="city">
+         </td>
+       </tr> 
+       <tr>
+         <td class="h">
+           <span tooltip="Name of the country">Country</span>
+         </td><td>
+           <select ng-model="data.geolocation.country" required name="country"
+                   ng-options="c for c in countries">
+             <option value="">-- select country --</option>
+           </select>
+         </td>
+       </tr> 
+       <tr>
+         <td class="h">
+           <span tooltip="Site photography URL">Picture</span>
+         </td>
+         <td>
+           <input ng-model="data.geolocation.picture" type="url"
+                  name="picture">
+         </td>
+       </tr>
+
+       <tr ng-show='isAdmin'>
+         <td class="h">
+           <span tooltip="Set by Svom admin">Status</span>
+         </td>
+         <td>
+           <input type="text" ng-model="data.admin.status"
+                  ng-readonly=true>
+         </td>
+       </tr> 
+      </tbody>
+    </table>
+
+    <span style="font-weight: bold;"
+          tooltip="Useful comments about the site location">
+      Remarks
+    </span>
+    <textarea ng-model="data.geolocation.remarks" name="remarks"
+              style="width: 39em; height: 10em;">
+    </textarea>
+
+    </div>
+
+    <button class="btn btn-small" tooltip="Clear changes"
+            style="margin-right: 2em;"
+            type="button" ng-click="reset()">
+      Reset
+    </button>
+    <button class="btn btn-small" type="button" tooltip="Save changes"
+            ng-click="save()" ng-disabled="!GeolocationForm.$valid">Save
+    </button>
+  </div>
+
+  <div class="msg">
+    {{message}}
+  </div>
+
+  </form>
+</div>

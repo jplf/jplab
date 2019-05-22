@@ -1,0 +1,61 @@
+#_______________________________________________________________________________
+
+# Composition of mariadb
+
+# To start the server :
+# docker stack deploy -c docker-compose.yml sonardb
+
+# To use the client
+# docker run -it --rm mariadb:10.4 mysql -h svom-fsc-0 -uroot -p
+
+# Jean-Paul Le Fèvre - April 2019
+
+#_______________________________________________________________________________
+
+version: '3.6'
+
+services:
+
+  mariadb:
+    image: mariadb:10.4
+    
+    volumes:
+      - /var/db/mysql:/var/lib/mysql
+
+    ports:
+      - 3306:3306
+      
+    environment :
+        MYSQL_USER: sonar
+        MYSQL_PASSWORD_FILE: /run/secrets/sonar_password
+        MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mariadb_password
+        
+    networks:
+      - sonarnet
+
+    secrets:
+      - source: mariadb_password
+        target: /run/secrets/mariadb_password
+        read_only: true
+ 
+      
+  adminer:
+    image: adminer:4.7
+    
+    ports:
+      - 20080:8080
+      
+    networks:
+      - sonarnet
+
+secrets:
+  sonar_password:
+    external: true
+  mariadb_password:
+    external: true
+      
+networks:
+  sonarnet:
+    external: false
+
+#_______________________________________________________________________________

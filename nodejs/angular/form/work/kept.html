@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" ng-app="main-module" id="ng-app">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <!-- [if lte IE 8] >
+  <div ng-view></div>
+
+      <script src="js/json3.min.js"></script>
+      <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+      </script>
+  <! [endif] -->
+
+  <link rel="stylesheet" href="/css/style.css" >
+
+  <title>Angular Site Manager</title>
+
+</head>
+
+<body>
+<div class="main">
+
+<div ng-controller="MapCtrl">
+
+  <h3>{{header}}</h3>
+
+	<div class="google-map" 
+		center="position.coords"
+		zoom="zoom" 
+		markers="markers"
+		latitude="clickedLatitudeProperty"
+		longitude="clickedLongitudeProperty"
+		mark-click="true"
+		draggable="true"
+		fit="true"
+		events="eventsProperty"
+		style="height: 400px; width: 90%">
+	</div>
+
+</div>
+
+
+</div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+<script
+   src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js">
+</script>
+
+<script src="js/angular-google-maps.js"></script>
+
+<script src="js/main-module.js"></script>
+</body>
+</html>

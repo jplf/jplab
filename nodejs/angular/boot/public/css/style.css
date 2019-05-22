@@ -1,0 +1,33 @@
+/*
+ * CSS for the Express pages - Jean-Paul Le Fèvre - June  2013
+ */
+/* ----------------------------------------------------------------------- */
+
+body {
+  padding: 50px;
+  background-color: #e0ff9a;
+}
+
+div.main {
+  border: 1px solid #0000aa;
+  border-radius: 20px;
+  margin: auto;
+  padding: 3em 1em;
+}
+
+div.center {
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+input.b {
+        color: blue;
+        font-weight: bold;
+}
+
+/* ----------------------------------------------------------------------- */
+

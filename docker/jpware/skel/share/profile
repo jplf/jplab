@@ -1,0 +1,32 @@
+#! /bin/bash
+#_____________________________________________________________________________
+#
+#  Environment file - Jean-Paul Le Fèvre
+#_____________________________________________________________________________
+
+export ORGROOT=/usr/local
+PATH=/usr/local/bin:/bin:/usr/bin:/usr/bin/X11
+
+export ENV=$HOME/.kshrc
+export VISUAL=emacs
+export EDITOR=emacs
+export HOSTNAME=`hostname`
+export JPLF=/home/lefevre
+
+export ANT_HOME=/opt/ant
+export EDITOR=emacs
+export ENV=$JPLF/.kshrc
+export JAVA_HOME=/opt/jdk
+export VISUAL=emacs
+
+export LANG=en_US.utf8
+
+HISTFILE=$HOME/.history.$$~
+PS1='\[\033[34;1m\]\244\[\033[0m\] '
+PS2='\[\033[34;1m\]\254\[\033[0m\] '
+
+. $ENV
+
+export STD_PATH=$PATH
+
+#_____________________________________________________________________________

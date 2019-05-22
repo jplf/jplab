@@ -1,0 +1,28 @@
+#_______________________________________________________________________________
+
+# Configuration of the Svom nats server.
+
+# docker secret
+# create -l content="Svom Messaging configuration" nats.conf nats-server.yml
+
+# Jean-Paul Le Fèvre - October 2018
+# See : https://nats.io/documentation/server/gnatsd-config
+#_______________________________________________________________________________
+
+port: 4222       # port to listen for client connections
+
+http_port: 8222 # HTTP monitoring port
+
+log_file: "/tmp/nats-server.log"
+
+streaming: {
+    cluster_id: svom-cluster
+}
+
+authorization {
+  user:     svom
+  password: mot2passe
+  timeout:  5
+}
+
+#_______________________________________________________________________________

@@ -1,0 +1,11 @@
+<div class="pane" ng-controller="DiscsCtrl">
+
+  <div>
+
+    <span style="margin-right:0.5em;"ng-repeat="r in zikdb.rows">
+      <a href="/discs/{{r.key}}">{{r.key}}</a> <em class="text-muted">({{r.value}})</em>
+    </span>
+
+  </div>
+
+</div>

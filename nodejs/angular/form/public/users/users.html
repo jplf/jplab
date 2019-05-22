@@ -1,0 +1,33 @@
+
+<div class="pane" ng-controller="UsersCtrl">
+
+  <h3>{{header}}</h3>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>login</th>
+        <th>role</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='who in userList'>
+        <td>{{$index}}</td>
+        <td>{{who.login}}</td>
+        <td>{{who.role}}</td>
+        <td>{{who.personnal.firstName}}</td>
+        <td>{{who.personnal.lastName}}</td>
+        <td>{{who.access.created}}</td>
+      </tr> 
+    </tbody>
+  </table>
+
+  <div class="msg">
+    {{message}}
+  </div>
+
+</div>

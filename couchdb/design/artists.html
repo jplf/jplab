@@ -1,0 +1,23 @@
+<div class="pane" ng-controller="ArtistsCtrl">
+
+  <div>
+    <span style="margin-right:1em;"ng-repeat="r in zikdb.rows">
+      <a href="/artists/{{r.key}}">{{r.key}}</a> <em class="text-muted">({{r.value}})</em>
+    </span>
+  </div>
+
+    <ul class="pager">
+    <li>
+      <a ng-class="{muted: zikdb.queryActive}"
+         ng-click="prevClick()"
+         ng-show="zikdb.prevRows.length">Previous</a>
+    </li>
+    <li>
+      <a ng-class="{muted: zikdb.queryActive}"
+         ng-click="nextClick()"
+         ng-show="zikdb.nextRow">Next</a>
+    </li>
+    </ul>
+
+</div>
+

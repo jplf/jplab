@@ -1,0 +1,17 @@
+*~
+.*~
+*cache*
+*Cache*
+.newsrc-news*
+*.class
+*.log
+*.bz2
+*News*
+tmp
+misc
+core
+.mozilla
+.thunderbird
+*adt-bundle*
+backup
+.gvfs

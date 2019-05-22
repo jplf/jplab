@@ -1,0 +1,60 @@
+<div class="pane" ng-controller="TagCtrl">
+
+  <h2 class="h">{{header}}</h2>
+
+  <form name="TagForm">
+    <div class="well center" style="width: 50%; margin-top:2em;">
+
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td class="h">Filename</td><td>{{tag.filename}}</td>
+          </tr>
+          <tr>
+            <td class="h">Folder</td><td>{{tag.disc}}</td>
+          </tr>
+          <tr>
+            <td class="h">Artist</td>
+            <td>
+              <input class="form-control" type="text" ng-model="tag.artist">
+             </td>
+          </tr>
+          <tr>
+            <td class="h">Album</td>
+            <td>
+              <input class="form-control" type="text" ng-model="tag.album">
+            </td>
+          </tr>
+          <tr>
+            <td class="h">Songname</td>
+            <td>
+              <input class="form-control" type="text" ng-model="tag.songname">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button ng-class="btn-small" style="margin-right:1em;"
+              ng-disabled="!TagForm.$dirty"
+              ng-click="saveTag()"
+              type="button">
+        Save
+      </button>
+
+      <button ng-class="btn-small"
+              ng-disabled="!TagForm.$dirty"
+              ng-click="clearTag()"
+              type="button">
+        Clear
+      </button>
+
+    </div>
+  </form>
+  
+  <div class="msg" ng-show="message">
+    <div class="label label-warning" style="margin-top:2em;">
+      {{message}}
+    </div>
+  </div>
+
+</div>

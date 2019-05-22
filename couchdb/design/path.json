@@ -1,0 +1,8 @@
+{
+  "_id" : "_design/pathname",
+  "views" : {
+    "songs" : {
+      "map" : "function(doc) {if (doc.disc && doc.filename) {emit([doc.disc, doc.filename], doc)}}"
+    }
+  }
+}
