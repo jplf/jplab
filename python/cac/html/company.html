@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<!--
+    This is a Mako template file.
+-->
+<head>
+<meta charset="utf-8">
+
+<script src="/js/cacplot.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js">
+</script>
+<script src="/js/jquery.jqplot.min.js"></script>
+<script src="/js/jqplot.dateAxisRenderer.min.js"></script>
+
+<link rel="stylesheet" href="/css/jquery.jqplot.css" />
+<link rel="stylesheet" href="/css/cac40.css" />
+
+<script>
+/**
+ * Local functions.
+ * Load the datasets and prepare the plots.
+ */
+function startup() {
+    var companyName = "${companyRecord['main_name']}";
+    initialize(companyName);
+}
+
+/**
+ * Manage the accordion
+ */
+$(function() {
+
+    // Create the accordion widget.
+    $("#accordeon").accordion({active: 0});
+
+    // Redraw the plots for the selected panel.
+    $( "#accordeon" ).accordion({
+        activate: function( event, ui ) {
+            // Facebook
+            if (ui.newHeader.attr("id") == 1) {
+                cac.fbkLikePlot.redraw(false);
+                cac.fbkTalkPlot.redraw(false);
+            }
+            // Tweeter
+            else if (ui.newHeader.attr("id") == 2) {
+                cac.twtTweetPlot.redraw(false);
+                cac.twtFlowerPlot.redraw(false);
+            }
+            else {
+                console.log("Unknown header", ui.newHeader.attr("id"));
+            }
+        }
+    });
+});
+
+</script>
+
+</head>
+<body onload="startup()">
+
+<h2>Survey of ${companyRecord['main_name']}</h2>
+
+<table>
+<tr>
+<td>Id</td><td>${companyRecord['id']}</td>
+</tr><tr>
+<td>web site</td>
+<td><a href="http://${companyRecord['web_site']}">
+${companyRecord['web_site']}</a></td>
+</tr><tr>
+<td>facebook page</td>
+<td><a href="http://www.facebook.com/${companyRecord['fb_path']}">
+${companyRecord['fb_path']}</a></td>
+</tr><tr>
+<td>twitter page</td>
+<td><a href="https://www.twitter.com/${companyRecord['tw_path']}">
+${companyRecord['tw_path']}</a></td>
+</tr><tr>
+<td>stock index</td><td>${companyRecord['stock_index']}</td>
+</tr><tr>
+<td>sector</td><td>${companyRecord['sector']}</td>
+</tr><tr>
+<td>country</td><td>${companyRecord['country_code']}</td>
+</tr>
+</table>
+
+<div id="accordeon">
+
+  <h3 id="1">Facebook</h3>
+
+  <div class="pane">
+    <div id="fb_like" class="plot"></div>
+    <div id="fb_talk" class="plot"></div>
+  </div>
+
+  <h3 id="2">Twitter</h3>
+
+  <div class="pane">
+    <div id="tw_tweets" class="plot"></div>
+    <div id="tw_followers" class="plot"></div>
+  </div>
+
+</div>
+
+
+<div style="margin: 2em auto; text-align: center;">
+<a href="/"><b>back</b></a>
+</div>
+
+</body>
+</html>

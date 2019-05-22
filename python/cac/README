@@ -1,0 +1,56 @@
+
+------------------------------------------------------------------------------
+
+Author  : Jean-Paul Le Fèvre <jean-paul.lefevre at cea dot fr>
+Date    : February 2012
+Licence : http://www.cecill.info/licences/Licence_CeCILL_V2-en.html
+
+This is the main directory of the cac40 application.
+
+Useful input data are kept in the data subdirectory.
+The *.csv are comma separated values files used to populate the database
+and allowing to test the application.
+
+The *.db are the sqlite3 database files. The cac40.db is the main one.
+Make sure to save a backup copy on a regular basis.
+The content of the database can be displayed with sqlitebrowser.
+
+The *.sql files are sets of SQL statements. The most important one is
+create_cac.sql which can be used to recreate the database schema.
+
+Template pages sent by the web server are stored in the html subdirectory.
+The cascading style sheets are in the css subdir.
+
+The *.py file are python scripts. The main one is escore.py which has to be
+run regularly to get and store into the database the various scores generated
+on the social network web pages.
+
+All python scripts accept the -h option to print a brief help message.
+
+cacdb.py may be used to print information about the content of the db.
+
+reader.py takes a csv file and populates the db with its content.
+
+fb_like.py is useful to test how to get the facebook scores.
+
+tw_tweet.py is useful to test how to get the twitter scores.
+These 2 last scripts do not modify the database.
+
+server.py is a small http server used to display harvested data.
+
+Installation
+------------
+
+Mandatory packages :
+
+Python   : http://python.org/
+SQLite   : http://www.sqlite.org/
+Cherrypy : http://cherrypy.org/
+Mako     : http://www.makotemplates.org/
+
+Already provided packages :
+
+jQuery : http://jquery.com/
+jqPlot : http://www.jqplot.com/
+
+------------------------------------------------------------------------------

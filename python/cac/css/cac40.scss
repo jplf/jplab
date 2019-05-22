@@ -1,0 +1,76 @@
+/*
+ * CSS fo the cac40pages - Jean-Paul Le Fèvre - February 2012
+ * $Revision$
+*
+ * Theme found on kuler.adobe.com
+ * #78947c
+ * #a2ad8e
+ * #bfbc87
+ * #d6cb8e
+ * #f0d896
+ */
+
+$bord: 1px dotted black;
+$bgnd: #d6cb8e;
+
+body {  
+    color:            black;
+    background:       #bfbc87;
+    margin-left:      0.5em;
+}
+
+div#main {  
+    width: 95%;
+    margin: 10em auto;
+    padding: 1em;
+    text-align: center;
+    border: $bord;
+    background: $bgnd;
+}
+
+p.comp {
+    text-align:  left;
+    border:      0px none black;
+    margin:      0em;
+    padding:     0em;
+    font-weight: bold;
+}
+
+div.plot {
+    margin:        auto;
+    margin-top:    2em;
+    border:        $bord;
+    height:       300px;
+    width:        800px;
+}
+
+h2 {
+    margin: 1em auto;
+    text-align: center;
+}
+
+div#accordeon h3 {
+    margin: 1em auto;
+    text-align:     center;
+    border:         solid;
+    border-color:   #78947c;
+    border-radius:  20px;
+    border-width:   1px;
+    width:         10em;
+    background:    $bgnd;
+    padding:       0.5em;
+}
+
+table {
+    margin:     auto;
+    background: $bgnd;
+    border:     $bord;
+    padding:    0.5em;
+}
+
+td {
+    text-align: left;
+    padding: 0.5em;
+}
+
+/* --------------------------------------------------------------------- */

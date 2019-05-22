@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+body {  
+        color:            black;
+        margin-left:      0.5em;
+}
+
+div.t {
+        margin     : auto;
+        text-align : left;
+}
+
+div.c {
+        margin     :   auto;
+        text-align :   left;
+        border:        dotted;
+        border-width:  1px;
+        border-color:  #a87a2c;
+        width:         300px;
+}
+
+h2 {
+        text-align :   center;
+}
+
+</style>
+
+<script type="text/javascript">
+
+  "use strict";
+
+  function initialize() {
+ 
+    var ws_uri = "ws://localhost:9000";
+    var sheet = document.getElementById("count");
+    var socket;
+ 
+    if ("WebSocket" in window) {
+      socket = new WebSocket(ws_uri);
+    }
+
+    socket.onopen = function() {
+       sheet.innerHTML = "Connected !"
+       getMore()
+    }
+ 
+    socket.onmessage = function(msg) {
+       sheet.innerHTML = "Got : " + msg.data;
+       setTimeout(getMore, 2000);
+    }
+
+    socket.onclose = function() {
+       sheet.innerHTML = "See you later !";
+    }
+
+    function getMore() {
+       socket.send("more");
+    }
+
+  }
+
+</script>
+</head>
+
+<body onload="initialize()">
+
+<h2>Websocket experiment</h2>
+
+<div id="intro" class="t">
+<p>
+This is just a test to see what's possible with the websockets.
+</p>
+</div>
+
+<h2>Counter values</h2>
+
+<div id="count" class="c">
+And the values are ...
+
+</div>
+<p>
+<script type="text/javascript">
+document.write("<b>bravo !</b>");
+</script>
+
+</body>
+
+</html>
